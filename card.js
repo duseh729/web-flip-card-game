@@ -6,20 +6,38 @@ let first = null;
 
 flipObjs.forEach(flipObj => {
   flipObj.addEventListener("click", e => {
+    // console.log("뒤집히기 전");
     e.currentTarget.classList.add("flip-event");
+    // console.log("뒤집히기 후");
     if (first != null && first.id == e.currentTarget.id) {
-      console.log("맞음")
-      first = null
-      return
+      console.log("맞음");
+      first.classList.add("currect");
+      e.currentTarget.classList.add("currect");
+      first = null;
+      return;
     } else if (first == null) {
       first = e.currentTarget;
-    }else{
-      console.log("틀림")
-      first.classList.remove("flip-event")
-      e.currentTarget.classList.remove("flip-event")
-      first=null
+    } else {
+      // sleep(400);
+      console.log("틀림");
+      first = null;
+      setTimeout(() => {
+        const flipedCard = document.querySelectorAll(".flip-event");
+        flipedCard.forEach(item => {
+          console.log(item.classList.value)
+          if (item.classList.value.includes("currect")) {
+          } else {
+            item.classList.remove("flip-event");
+          }
+        });
+      }, 400);
     }
     // console.log(e.currentTarget);
     // console.log(e.currentTarget.parentNode.id);
   });
 });
+
+function sleep(ms) {
+  const wakeUpTime = Date.now() + ms;
+  while (Date.now() < wakeUpTime) {}
+}
