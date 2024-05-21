@@ -1,18 +1,20 @@
+
 .container {
     display: grid;grid-template-columns: repeat(4, 1fr);gap: px;
+    border: 1px solid;
+    width: 1200px;
+    height: 1200px;
+    margin: auto;
 }
 
 
-
-
 .flip {
-    width: 200px; 
-    height: 200px; 
+    width: auto; 
+    height: 300px; 
     position: relative;
     transition: .4s;
     transform-style: preserve-3d;
     border:1px solid;
-    cursor: pointer;
 }	
 
 .front, .back {
@@ -23,7 +25,11 @@
 }
 
 .front {
-    background: red; 
+    background-color:tomato; 
+    background-image: url("./img/question.png");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: 50%;
 }
 
 /* 뒷면은 사전에 미리 뒤집기*/
@@ -31,6 +37,7 @@
     background: royalblue; 
     transform: rotateY(180deg);
 }
+
 
 #one>.back{
     background-image: url("./img/0.png");
@@ -70,7 +77,4 @@
 /*호버 시 뒤집기*/
 .flip-event {
     transform: rotateY(180deg);
-}
-.currect, .clicked {
-    pointer-events: none;
 }
