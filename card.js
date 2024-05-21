@@ -17,14 +17,16 @@ flipObjs.forEach(flipObj => {
       return;
     } else if (first == null) {
       first = e.currentTarget;
+      first.classList.add("clicked")
     } else {
       // sleep(400);
       console.log("틀림");
+      first.classList.remove('clicked')
       first = null;
       setTimeout(() => {
         const flipedCard = document.querySelectorAll(".flip-event");
         flipedCard.forEach(item => {
-          console.log(item.classList.value)
+          // console.log(item.classList.value)
           if (item.classList.value.includes("currect")) {
           } else {
             item.classList.remove("flip-event");
@@ -36,8 +38,3 @@ flipObjs.forEach(flipObj => {
     // console.log(e.currentTarget.parentNode.id);
   });
 });
-
-function sleep(ms) {
-  const wakeUpTime = Date.now() + ms;
-  while (Date.now() < wakeUpTime) {}
-}

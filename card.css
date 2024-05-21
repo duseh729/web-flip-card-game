@@ -12,6 +12,7 @@
     transition: .4s;
     transform-style: preserve-3d;
     border:1px solid;
+    cursor: pointer;
 }	
 
 .front, .back {
@@ -69,4 +70,7 @@
 /*호버 시 뒤집기*/
 .flip-event {
     transform: rotateY(180deg);
+}
+.currect, .clicked {
+    pointer-events: none;
 }
