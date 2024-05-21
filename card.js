@@ -29,10 +29,11 @@ flipObjs.forEach(flipObj => {
       
       if(cnt==8){
         setTimeout(() => {
-          alert(timeElapsed+"초 걸림")
+          alert(timeElapsed+"초 걸림!!")
           console.log(timeElapsed+"초 걸림")
           clearInterval(timerInterval);
           timerInterval = null;
+          location.href="./end.html"
         }, 400);
         
       }
