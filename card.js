@@ -2,7 +2,6 @@ const flipObjs = document.querySelectorAll(".flip");
 const frontObjs = document.querySelectorAll(".front");
 
 let first = null;
-// let second
 
 flipObjs.forEach(flipObj => {
   flipObj.addEventListener("click", e => {
