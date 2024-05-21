@@ -1,3 +1,22 @@
+body{
+    background-color: black;
+}
+
+.Timer{
+    padding: 40px;
+    padding-left: 450px;
+    display: flex;
+    width: 200px;
+    flex-wrap: nowrap;
+    color: aliceblue;
+}
+#timer{
+    flex-grow: 1;
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bolder;
+}
+#timer2{flex-grow: 4;padding-top: 20px;}
 
 .container {
     display: grid;grid-template-columns: repeat(4, 1fr);gap: px;
