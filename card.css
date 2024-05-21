@@ -3,6 +3,8 @@
 }
 
 
+
+
 .flip {
     width: 200px; 
     height: 200px; 
@@ -28,6 +30,41 @@
     background: royalblue; 
     transform: rotateY(180deg);
 }
+
+#one>div>.back{
+    background-image: url("./img/0.png");
+    background-size: cover;
+
+}
+#two>div>.back{
+    background-image: url("./img/1.png");
+    background-size: cover;
+}
+#three>div>.back{
+    background-image: url("./img/2.png");
+    background-size: cover;
+}
+#four>div>.back{
+    background-image: url("./img/3.png");
+    background-size: cover;
+}
+#five>div>.back{
+    background-image: url("./img/4.png");
+    background-size: cover;
+}
+#six>div>.back{
+    background-image: url("./img/5.png");
+    background-size: cover;
+}
+#seven>div>.back{
+    background-image: url("./img/6.png");
+    background-size: cover;
+}
+#eight>div>.back{
+    background-image: url("./img/7.png");
+    background-size: cover;
+}
+
 
 /*호버 시 뒤집기*/
 .flip-event {
