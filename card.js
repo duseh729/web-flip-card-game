@@ -61,3 +61,7 @@ flipObjs.forEach(flipObj => {
     // console.log(e.currentTarget.parentNode.id);
   });
 });
+
+// 대충 랭킹 기능이라고 침
+console.log("랭킹");
+// 추가 기능입니다~ㅋ
